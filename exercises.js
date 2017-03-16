@@ -3,13 +3,11 @@
 function getBiggest(x, y) {
   //x and y are integers.  Return the larger integer
   //if they are the same return either one
-
   if(x > y){
     return x;
   }
   else if (y > x){
     return y;
-
   }
   else{
     return x;
@@ -41,7 +39,6 @@ function isTenOrFive(num) {
   //otherwise return false
   if(num === 10 || num ===5){
     return true;
-
   }
   else{
     return false;
@@ -140,12 +137,16 @@ function incrementByOne(arr) {
 function addItemToArray(arr, item) {
   //add the item to the end of the array
   //return the array
+  var addedEnd = arr.push(item);
+  return addedEnd;
 }
 
 function addItemToFront(arr, item) {
   //add the item to the front of the array
   //return the array
   //hint: use the array method .unshift
+  var frontArray = arr.unshift(item);
+  return frontArray;
 }
 
 function wordsToSentence(words) {
@@ -153,6 +154,11 @@ function wordsToSentence(words) {
   //return a string that is all of the words concatenated together
   //spaces need to be between each word
   //example: ['Hello', 'world!'] -> 'Hello world!'
+  // for(var i = 0; i < words.length; i++){
+    
+  // }
+  var sentence = words.join(' ');
+  return sentence;
 }
 
 function contains(arr, item) {
