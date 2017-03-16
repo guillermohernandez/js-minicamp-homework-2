@@ -145,8 +145,8 @@ function addItemToFront(arr, item) {
   //add the item to the front of the array
   //return the array
   //hint: use the array method .unshift
-  var frontArray = arr.unshift(item);
-  return frontArray;
+  arr.unshift(item);
+  return arr;
 }
 
 function wordsToSentence(words) {
@@ -169,16 +169,29 @@ function contains(arr, item) {
 function addNumbers(numbers) {
   //numbers is an array of integers.
   //add all of the integers and return the value
+  numbers.reduce(function (a, b) {
+  return a + b;
+}, 0);
 }
 
 function averageTestScore(testScores) {
   //testScores is an array.  Iterate over testScores and compute the average.
   //return the average
+  var total = 0;
+  var average = 0;
+
+  for(var i = 0; i < testScores.length; i++){
+    total += testScores[i];
+  }
+  average = total/testScores.length;
+  return average;
+
 }
 
 function largestNumber(numbers) {
   //numbers is an array of integers
   //return the largest integer
+  return Math.max.apply(null, numbers);
 }
 
 //Do not modify code below this line.
