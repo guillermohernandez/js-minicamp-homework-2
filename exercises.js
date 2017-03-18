@@ -131,14 +131,18 @@ function incrementByOne(arr) {
   //arr is an array of integers  
   //increase each integer by one
   //return the array
-
+  var addOne = arr.map(function(number) {
+  return number + 1;
+});
+return addOne;
 }
 
 function addItemToArray(arr, item) {
   //add the item to the end of the array
   //return the array
-  var addedEnd = arr.push(item);
-  return addedEnd;
+  arr.push(item);
+  return arr;
+
 }
 
 function addItemToFront(arr, item) {
@@ -154,9 +158,6 @@ function wordsToSentence(words) {
   //return a string that is all of the words concatenated together
   //spaces need to be between each word
   //example: ['Hello', 'world!'] -> 'Hello world!'
-  // for(var i = 0; i < words.length; i++){
-    
-  // }
   var sentence = words.join(' ');
   return sentence;
 }
@@ -164,14 +165,21 @@ function wordsToSentence(words) {
 function contains(arr, item) {
   //check to see if item is inside of arr
   //return true if it is, otherwise return false
+  if (arr.includes(item)){
+    return true;
+  }
+  return false;
 }
 
 function addNumbers(numbers) {
   //numbers is an array of integers.
   //add all of the integers and return the value
-  numbers.reduce(function (a, b) {
+  var numbersAdded = numbers.reduce(function (a, b) {
   return a + b;
 }, 0);
+
+return numbersAdded;
+
 }
 
 function averageTestScore(testScores) {
